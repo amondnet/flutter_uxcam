@@ -17,5 +17,6 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.dependency 'UXCam','~> 3.0.6'
   s.ios.deployment_target = '9.0'
+  s.static_framework = true
 end
 
