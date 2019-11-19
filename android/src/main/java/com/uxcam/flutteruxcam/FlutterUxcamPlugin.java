@@ -148,7 +148,9 @@ public class FlutterUxcamPlugin implements MethodCallHandler {
             callbackContext.error("This API call is not supported by UXCam Android, API called: " + call.method);
             return false;
         }*/
-
+         else if("optIntoSchematicRecordings".equals(call.method)) {
+             result.success(null);
+        }
         else {
             result.notImplemented();
         }

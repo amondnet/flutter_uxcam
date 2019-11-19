@@ -128,9 +128,11 @@
     } else if ([@"urlForCurrentSession"isEqualToString:call.method]) {
         NSString* url = [UXCam urlForCurrentSession];
         result(@[url]);
-    }else if ([@"addVerificationListener"isEqualToString:call.method]) {
+    } else if ([@"addVerificationListener"isEqualToString:call.method]) {
         NSLog(@"UXCam: addVerificationListener is not supported by UXCam iOS.");
-    }else {
+    } else if ([@"optIntoSchematicRecordings"isEqualToString:call.method]) {
+              [UXCam optIntoSchematicRecordings];
+    } else {
         result(FlutterMethodNotImplemented);
     }
 }
